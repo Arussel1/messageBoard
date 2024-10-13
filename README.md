@@ -18,6 +18,12 @@ This project is a simple message board application built using **Spring Boot**, 
 - Hibernate (JPA)
 - Gradle (build tool)
 
+## Live Demo
+
+The application is deployed on Heroku. You can access it here:
+
+[Mini Message Board on Heroku](https://messageboard111-ac85598e9130.herokuapp.com/)
+
 ## Getting Started
 
 ### Prerequisites
