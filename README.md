@@ -66,14 +66,40 @@ This project is a simple message board application built using **Spring Boot**, 
       spring.jpa.show-sql=true
       spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
       ```
+4. Setup environment variable:
+  ### Linux/MacOS:
+  ```bash
+  export DB_HOST=
+  export DB_PORT=
+  export DB_NAME=
+  export DB_USERNAME=
+  export DB_PASSWORD=
+  ```
+  ### Windows(Command Prompt):
+  ```bash
+  set DB_HOST=localhost
+  set DB_PORT=5432
+  set DB_NAME=my_database
+  set DB_USERNAME=my_user
+  set DB_PASSWORD=my_password
+  ```
+  ### Windows (PowerShell):
+  ```bash
+  $env:DB_HOST="localhost"
+  $env:DB_PORT="5432"
+  $env:DB_NAME="my_database"
+  $env:DB_USERNAME="my_user"
+  $env:DB_PASSWORD="my_password"
+  ```
 
-4. Run the application:
+
+5. Run the application:
 
     ```bash
     ./gradlew bootRun
     ```
 
-5. Open your browser and go to `http://localhost:8080/` to view the message board.
+6. Open your browser and go to `http://localhost:8080/` to view the message board.
 
 ### Using the Application
 
