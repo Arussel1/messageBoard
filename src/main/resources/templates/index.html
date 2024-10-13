@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Mini Messageboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 class="title" th:text="${title}">Mini Messageboard</h1>
+<p>Hi everyone! Welcome to FFA (Free for all) chat room. You are free to send any message. Remember to follow the rules!</p>
+
+<div th:each="message : ${messages}">
+    <div class="container">
+        <p class="messages" th:text="${message.text}">Message text here</p>
+        <p th:text="${message.userName} + ' at ' + ${#dates.format(message.added, 'yyyy-MM-dd HH:mm')}">User and Date</p>
+    </div>
+</div>
+
+<button class="button" onclick="redirectToSendMessage()">Send a message</button>
+
+<script>
+    function redirectToSendMessage() {
+        window.location.href = '/new';
+    }
+</script>
+</body>
+</html>

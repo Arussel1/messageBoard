@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Send a Message</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 class="title">Send a Message</h1>
+
+<form action="/new" method="POST" class="form">
+    <label for="author">Name:</label>
+    <input type="text" id="author" name="messageUser" value="">
+
+    <label for="content">Message:</label>
+    <input type="text" id="content" name="messageText" value="">
+
+    <button type="submit" class="button">Submit</button>
+</form>
+
+<a href="/" class="button">Back to Messages</a>
+</body>
+</html>
+
